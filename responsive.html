@@ -2,8 +2,8 @@
 =========================================================
 Name        : index.html
 Assignment  : Lab 4 Exercise B
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : Phoenix Bouma, Victor Gouttin
+Submission  : Feb 7,2024
 Description : Responsive Layouts.
 =========================================================
 -->
@@ -18,25 +18,7 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
-
-	<style>	
-		/* Remove borders at the end, they have been add just for detecting positions of items*/	
-		div {
-			border: 1px dashed gray;	
-		}
-		.row{ 
-			border: 1px solid red;			
-		}
-		.large {
-			border: 1px solid blue;	
-		}
-		.medium {
-			border: 1px solid green;	
-		}
-		.small {
-			border: 1px solid yellow;	
-		}		
-	</style>
+	<link rel="stylesheet" type="text/css" href="menu.css">
 
     <style>
 		body { margin: 0; padding: 0;}
@@ -48,35 +30,73 @@ Description : Responsive Layouts.
         .news-item { padding: 10px; }
 		
 		.row { 
+			display: table;
+			width: 100%;
 			/*I need some CSS codes.*/		
 		}
 
 		.large, .medium, .small {
+			display: table-cell;
 			/*I need some CSS codes.*/
 		}
 		
 		.gap {
+			margin-bottom: 5rem;
 			/*I need some CSS codes.*/
 		}
 
 		@media screen and (min-width: 769px) {			
 			.large { 
-				/*I need some CSS codes.*/
+				width: 100%;
 			}
 			.medium { 
-				/*I need some CSS codes.*/
+				width: 70%;
 			}
 			.small { 
-				/*I need some CSS codes.*/
+				width: 30%;
 			 }
 		}
 
         @media screen and (max-width: 768px) {
-            /*I need some CSS codes.*/
+            .row {
+				display: table;
+				width: 100%;
+			}
+			.large {
+				display: table-row;
+				width: 100%;
+			}
+			.medium{
+				display: table-cell;
+				width: 60%; /* for medium */
+			}
+			.small{
+				display: table-cell;
+				width: 40%; /* for small */
+			}
+			.menu {
+				display: table-row;
+				width: 100%;
+				float: right;
+			}
+			.main {
+				width: 100%;
+				margin-left: 0;
+			}
         }
 
         @media screen and (max-width: 480px) {
 			/*I need some CSS codes.*/
+			.large, .medium, .small {
+				display: table-row;
+				width: 100%;
+			}
+			.row{
+				display: table;
+			}
+			h1 {
+				font-size: 18px;
+			}
         }
 
         

@@ -2,8 +2,8 @@
 =========================================================
 Name        : index.html
 Assignment  : Lab 4 Exercise C
-Author(s)   : Victor Gouttin, Phoenix Bouma
-Submission  : Feb 7th, 2024
+Author(s)   : Phoenix Bouma, Victor Gouttin
+Submission  : Feb 7,2024
 Description : Flex Layouts.
 =========================================================
 -->
@@ -16,25 +16,6 @@ Description : Flex Layouts.
 		This tag is essential for responsive design as it tells the browser how to control the page's dimensions and scaling.
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<style>	
-		/* Remove borders at the end, they have been added just for detecting positions of items*/	
-		div {
-			border: 1px dashed gray;	
-		}
-		.row{ 
-			border: 1px solid red;			
-		}
-		.large {
-			border: 1px solid blue;	
-		}
-		.medium {
-			border: 1px solid green;	
-		}
-		.small {
-			border: 1px solid yellow;	
-		}		
-	</style>
 
 	<style>
 		/* CSS for menu. You don't need to touch this part */
@@ -64,51 +45,49 @@ Description : Flex Layouts.
 			Apply border-box to all elements
 			*/
 			box-sizing: border-box;
-
 		}
         body { margin: 0; padding: 0; }
         img { max-width: 100%; height: auto; }
-        .container { 
-			/*I need some CSS codes.*/
+        .container {
 			display: flex;
 			flex-direction: column;
-			width: 100%
+			width: 100%;
+			/*I need some CSS codes.*/
 		 }
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
 		.body { 
-			/*I need some CSS codes.*/
 			display: flex;
-			width: 100%
+			width: 100%;
+			/*I need some CSS codes.*/
 		}
         .main { 
-			padding: 15px; 
-			/*I need some CSS codes.*/
-			display: flex;
+			padding: 15px;
+			display: flex; 
 			flex-direction: column;
-
+			/*I need some CSS codes.*/
 		}
         
         .news-item { padding: 10px; }
-        .row { 
-			/*I need some CSS codes.*/
+        .row {
 			display: flex;
 			flex-wrap: wrap;
+			/*I need some CSS codes.*/
 		}
         
 
         @media screen and (min-width: 769px) {
             .menu { width: 150px; }     
-			.large { 
+			.large {
+				width: 100%
 				/*I need some CSS codes.*/
-				width: 100%;
 			}
 			.medium { 
-				/*I need some CSS codes.*/
 				width: 70%;
+				/*I need some CSS codes.*/
 			}
 			.small { 
-				/*I need some CSS codes.*/
 				width: 30%;
+				/*I need some CSS codes.*/
 			 }       
         }
 
@@ -116,29 +95,30 @@ Description : Flex Layouts.
 			.body { 
 				flex-direction: column;
 				/*I need some CSS codes.*/
-			.large { 
-				width: 100%;
+			}
+            .menu ul {
+				flex-direction: row;
+			}
+            /*I need some CSS codes.*/
+			.large {
+				width: 100%
+				/*I need some CSS codes.*/
 			}
 			.medium { 
 				width: 60%;
+				/*I need some CSS codes.*/
 			}
 			.small { 
 				width: 40%;
-			 }       
-			}
-            .menu ul { 
 				/*I need some CSS codes.*/
-				flex-direction: row;
-			 }            
-            /*I need some CSS codes.*/
+			 }       
         }
 
         @media screen and (max-width: 480px) {
             .news-item header h1 { font-size: 18px; }
-            .medium, .small { 
-				/*I need some CSS codes.*/
+            .medium, .small {
 				width: 100%;
-
+				/*I need some CSS codes.*/
 			 }
         }
     </style>
